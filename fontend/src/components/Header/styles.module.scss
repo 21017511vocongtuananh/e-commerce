@@ -1,0 +1,13 @@
+@import '@styles/mixins.module.scss';
+@import '@styles/variables.module.scss';
+.containerHeader {
+  display: flex;
+  align-items: center;
+}
+
+.boxIcon {
+  @include redius_common(50%);
+  background-color: $primary_color;
+  width: 26px;
+  height: 26px;
+}
