@@ -1,13 +1,63 @@
 @import '@styles/mixins.module.scss';
 @import '@styles/variables.module.scss';
+
+.container {
+  @include flex_box_custom(center, center, 0px);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
 .containerHeader {
+  width: 1250px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 83px;
+}
+
+.containerIcon {
+  @include flex_box_custom(center, center, 20px);
+}
+
+.containerBox {
+  @include flex_box_custom(center, center, 20px);
+}
+
+.containerMenu {
+  @include flex_box_custom(center, center, 30px);
 }
 
 .boxIcon {
   @include redius_common(50%);
+  @include flex_box_custom(center, center, 0px);
   background-color: $primary_color;
   width: 26px;
   height: 26px;
+}
+
+.menu {
+  cursor: pointer;
+  padding-top: 9px;
+  font-size: 15px;
+  color: $primary_color;
+}
+
+.menu::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $primary_color;
+  margin-top: 6px;
+  transform-origin: right;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 300ms, opacity 300ms;
+}
+
+.menu:hover::after {
+  transform: scale(1);
+  opacity: 1;
 }
