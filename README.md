@@ -8,3 +8,8 @@ Dự án này được khởi tạo bằng Vite.
 
 ```bash
 npm create vite@4.1.0
+```bash
+npm install normalize.css
+npm i -D sass 
+
+
