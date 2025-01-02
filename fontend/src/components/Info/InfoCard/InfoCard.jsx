@@ -1,4 +1,5 @@
 import styles from '../styles.module.scss';
+
 function InfoCard({ titles, description, src }) {
   const { containerCard, containerContent, title, des } = styles;
   return (
