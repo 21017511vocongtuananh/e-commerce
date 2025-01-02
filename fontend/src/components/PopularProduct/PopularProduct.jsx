@@ -1,15 +1,13 @@
 import MainLayout from '@components/Layout/Layout';
 import styles from './styles.module.scss';
-import CountdowBanner from '@components/CountdowBanner/CountdowBanner';
 import ProductItem from '@components/ProductItem/ProductItem';
-function HeadingListProduct({ data }) {
-  const { container, containerItem } = styles;
-  console.log(data);
+
+function PopularProduct({ data }) {
+  const { container } = styles;
   return (
-    <MainLayout>
-      <div className={container}>
-        <CountdowBanner />
-        <div className={containerItem}>
+    <>
+      <MainLayout>
+        <div className={container}>
           {data.map((item) => (
             <ProductItem
               key={item._id}
@@ -20,9 +18,9 @@ function HeadingListProduct({ data }) {
             />
           ))}
         </div>
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </>
   );
 }
 
-export default HeadingListProduct;
+export default PopularProduct;
